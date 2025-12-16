@@ -110,10 +110,11 @@ export function determineForm(state, responses) {
     // Calculate composite scores (response score + population weight + baseline)
     // Population weight helps ensure target distributions are met
     const compositeScores = {};
-    const POPULATION_WEIGHT = 250; // Weight factor for population targeting (higher = more influence)
+    const POPULATION_WEIGHT = 3000; // Weight factor for population targeting (higher = more influence)
+    const RESPONSE_WEIGHT = 0.15; // Reduces influence of question scores to prevent dominance
     const BASELINE_SCORE = 10; // Ensures all forms are reachable
     for (const form of candidates) {
-        const responseScore = formScores[form] || 0;
+        const responseScore = (formScores[form] || 0) * RESPONSE_WEIGHT;
         const populationScore = (FORM_POPULATIONS[form] || 0) * POPULATION_WEIGHT;
         compositeScores[form] = BASELINE_SCORE + responseScore + populationScore;
     }
