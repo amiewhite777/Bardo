@@ -136,12 +136,19 @@ export function calculateResult(session: QuizSession): QuizResult {
   const { calculateSubcategory, determineForm } = require('./formSelection.js');
   const { calculateConfidence, getConfidenceLabel, getTrajectory } = require('./confidence.js');
 
+  // Import response processor
+  const { processResponses, determineBirthRealm, determineConsideredRealm, determineSpeedRoundRealm } = require('./responseProcessor.js');
+
   // Step 1: Initialize scoring state
   const state = initializeScoringState();
 
   // Step 2: Process all responses, accumulate points
-  // TODO: This will be implemented with question scoring data
-  // For now, we'll need a separate processResponses function
+  processResponses(state, session.responses);
+
+  // Determine birth, considered, and speed round realms
+  determineBirthRealm(state);
+  determineConsideredRealm(state);
+  determineSpeedRoundRealm(state);
 
   // Step 3: Apply section weights
   applyWeights(state);
