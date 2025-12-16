@@ -112,8 +112,8 @@ export function determineForm(state: ScoringState, responses: QuizResponse[]): v
   const subcategory = state.subcategory;
 
   // Get candidate forms for this subcategory
-  const hierarchy = REALM_HIERARCHY[realm as keyof typeof REALM_HIERARCHY];
-  const candidates = hierarchy.subcategories[subcategory as keyof typeof hierarchy.subcategories];
+  const hierarchy = REALM_HIERARCHY[realm as keyof typeof REALM_HIERARCHY] as any;
+  const candidates = (hierarchy.subcategories[subcategory] || []) as string[];
 
   if (!candidates || candidates.length === 0) {
     state.specificForm = 'Unknown';

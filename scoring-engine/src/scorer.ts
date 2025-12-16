@@ -6,7 +6,13 @@ import {
   RealmScore,
   QuizResult
 } from './types.js';
-import { SECTION_WEIGHTS, CALIBRATION } from './constants.js';
+import { SECTION_WEIGHTS, CALIBRATION, FORM_POPULATIONS } from './constants.js';
+import { detectShadowFlags, calculateShadowGap, applyShadowModifiers, interpretShadowGap } from './shadow.js';
+import { checkHumanQualification, checkDevaQualification, handleHumanQualificationFailure, handleDevaBypass } from './qualification.js';
+import { determinePrimaryRealm, calculateConsistency } from './tiebreaker.js';
+import { calculateSubcategory, determineForm } from './formSelection.js';
+import { calculateConfidence, getConfidenceLabel, getTrajectory } from './confidence.js';
+import { processResponses, determineBirthRealm, determineConsideredRealm, determineSpeedRoundRealm } from './responseProcessor.js';
 
 /**
  * Initialize a fresh scoring state
@@ -129,16 +135,6 @@ export function getSortedRealms(state: ScoringState): Array<{ realm: Realm; scor
  * Main scoring function
  */
 export function calculateResult(session: QuizSession): QuizResult {
-  // Import dependencies (will be at top of file in real implementation)
-  const { detectShadowFlags, calculateShadowGap, applyShadowModifiers, interpretShadowGap } = require('./shadow.js');
-  const { checkHumanQualification, checkDevaQualification, handleHumanQualificationFailure, handleDevaBypass } = require('./qualification.js');
-  const { determinePrimaryRealm, calculateConsistency } = require('./tiebreaker.js');
-  const { calculateSubcategory, determineForm } = require('./formSelection.js');
-  const { calculateConfidence, getConfidenceLabel, getTrajectory } = require('./confidence.js');
-
-  // Import response processor
-  const { processResponses, determineBirthRealm, determineConsideredRealm, determineSpeedRoundRealm } = require('./responseProcessor.js');
-
   // Step 1: Initialize scoring state
   const state = initializeScoringState();
 
@@ -193,10 +189,6 @@ export function calculateResult(session: QuizSession): QuizResult {
  * Generate final result object from scoring state
  */
 function generateResult(state: ScoringState, session: QuizSession): QuizResult {
-  const { interpretShadowGap } = require('./shadow.js');
-  const { getConfidenceLabel, getTrajectory } = require('./confidence.js');
-  const { FORM_POPULATIONS } = require('./constants.js');
-
   const realm = state.primaryRealm || 'Human';
   const subcategory = state.subcategory || 'Unknown';
   const form = state.specificForm || 'Unknown';
