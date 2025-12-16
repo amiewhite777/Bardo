@@ -129,41 +129,54 @@ export function getSortedRealms(state: ScoringState): Array<{ realm: Realm; scor
  * Main scoring function
  */
 export function calculateResult(session: QuizSession): QuizResult {
+  // Import dependencies (will be at top of file in real implementation)
+  const { detectShadowFlags, calculateShadowGap, applyShadowModifiers, interpretShadowGap } = require('./shadow.js');
+  const { checkHumanQualification, checkDevaQualification, handleHumanQualificationFailure, handleDevaBypass } = require('./qualification.js');
+  const { determinePrimaryRealm, calculateConsistency } = require('./tiebreaker.js');
+  const { calculateSubcategory, determineForm } = require('./formSelection.js');
+  const { calculateConfidence, getConfidenceLabel, getTrajectory } = require('./confidence.js');
+
   // Step 1: Initialize scoring state
   const state = initializeScoringState();
 
   // Step 2: Process all responses, accumulate points
   // TODO: This will be implemented with question scoring data
+  // For now, we'll need a separate processResponses function
 
   // Step 3: Apply section weights
   applyWeights(state);
 
   // Step 4: Detect shadow flags
-  // TODO: Implement shadow detection
+  detectShadowFlags(state, session.responses);
 
   // Step 5: Calculate shadow gap
-  // TODO: Implement shadow gap calculation
+  calculateShadowGap(state, session.responses);
 
   // Step 6: Apply shadow modifiers
-  // TODO: Implement shadow modifiers
+  applyShadowModifiers(state);
 
   // Step 7: Check Human/Deva qualification
-  // TODO: Implement qualification checks
+  checkHumanQualification(state, session.responses);
+  checkDevaQualification(state, session.responses);
 
   // Step 8: Determine primary realm
-  state.primaryRealm = getHighestRealm(state);
+  determinePrimaryRealm(state, session.responses);
+
+  // Handle qualification failures
+  handleHumanQualificationFailure(state);
+  handleDevaBypass(state);
 
   // Step 9: Calculate subcategory
-  // TODO: Implement subcategory determination
+  calculateSubcategory(state, session.responses);
 
   // Step 10: Determine specific form
-  // TODO: Implement form determination
+  determineForm(state, session.responses);
 
   // Step 11: Calculate consistency scores
-  // TODO: Implement consistency calculations
+  calculateConsistency(state, session.responses);
 
   // Step 12: Calculate confidence
-  // TODO: Implement confidence calculation
+  calculateConfidence(state);
 
   // Step 13: Generate result object
   return generateResult(state, session);
@@ -173,37 +186,49 @@ export function calculateResult(session: QuizSession): QuizResult {
  * Generate final result object from scoring state
  */
 function generateResult(state: ScoringState, session: QuizSession): QuizResult {
-  // This is a placeholder - will be fully implemented
+  const { interpretShadowGap } = require('./shadow.js');
+  const { getConfidenceLabel, getTrajectory } = require('./confidence.js');
+  const { FORM_POPULATIONS } = require('./constants.js');
+
   const realm = state.primaryRealm || 'Human';
+  const subcategory = state.subcategory || 'Unknown';
+  const form = state.specificForm || 'Unknown';
+
+  // Get second-highest realm for alternative
+  const sorted = getSortedRealms(state);
+  const secondaryRealm = sorted.length > 1 ? sorted[1].realm : undefined;
+  const secondaryScore = sorted.length > 1 ? sorted[1].score : undefined;
 
   return {
     realm,
     realmScore: state.realmScores[realm].weighted,
-    subcategory: state.subcategory || 'Unknown',
-    subcategoryScore: 0,
-    form: state.specificForm || 'Unknown',
+    subcategory,
+    subcategoryScore: state.subcategoryScores[realm][subcategory] || 0,
+    form,
     formDescription: {
-      name: state.specificForm || 'Unknown',
+      name: form,
       realm,
-      subcategory: state.subcategory || 'Unknown',
-      population: '0%',
-      pattern: '',
-      building: '',
-      networkSignature: '',
-      shadow: '',
-      exit: '',
-      instruction: ''
+      subcategory,
+      population: `${(FORM_POPULATIONS[form] * 100).toFixed(2)}%`,
+      pattern: '',  // Will be loaded from data
+      building: '', // Will be loaded from data
+      networkSignature: '', // Will be loaded from data
+      shadow: '',   // Will be loaded from data
+      exit: '',     // Will be loaded from data
+      instruction: '' // Will be loaded from data
     },
     confidence: state.confidence,
-    confidenceLabel: 'moderate',
+    confidenceLabel: getConfidenceLabel(state.confidence),
+    secondaryRealm,
+    secondaryScore,
     shadowGap: state.shadowGap,
-    shadowGapInterpretation: '',
+    shadowGapInterpretation: interpretShadowGap(state.shadowGap),
     shadowFlags: state.shadowFlags,
     birthRealm: state.birthRealm || realm,
-    trajectory: 'stable',
+    trajectory: getTrajectory(state.birthRealm, state.primaryRealm, state.trajectoryScore),
     riskVectors: state.riskVectors,
     protectiveFactors: state.protectiveFactors,
-    instruction: '',
+    instruction: '', // Will be loaded from data
     timestamp: Date.now(),
     sessionId: session.sessionId
   };
