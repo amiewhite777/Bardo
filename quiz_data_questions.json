@@ -1,0 +1,2302 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "totalQuestions": 50,
+    "sections": 7
+  },
+  "sections": [
+    {
+      "id": "birthRealm",
+      "name": "Birth Realm Calibration",
+      "description": "Establishes baseline conditions - where you started, not where you are now.",
+      "weight": 0.8,
+      "questionCount": 6
+    },
+    {
+      "id": "threePoisons",
+      "name": "Three Poisons Assessment",
+      "description": "Explores your relationship with aversion, craving, and confusion.",
+      "weight": 1.2,
+      "questionCount": 12
+    },
+    {
+      "id": "shadowDetection",
+      "name": "Shadow Detection",
+      "description": "Explores what's harder to see about yourself.",
+      "weight": 1.0,
+      "questionCount": 8
+    },
+    {
+      "id": "fiveHindrances",
+      "name": "Five Hindrances Current State",
+      "description": "A check on your current state - what's present right now.",
+      "weight": 1.0,
+      "questionCount": 6
+    },
+    {
+      "id": "networkTopology",
+      "name": "Network Topology Indicators",
+      "description": "How you connect with others - these patterns shape your experience.",
+      "weight": 1.1,
+      "questionCount": 6
+    },
+    {
+      "id": "riskVectors",
+      "name": "Risk Vector Assessment",
+      "description": "Where might your current patterns lead.",
+      "weight": 0.9,
+      "questionCount": 4
+    },
+    {
+      "id": "speedRound",
+      "name": "Speed Round",
+      "description": "Answer with your gut. First instinct only. Don't think - just respond.",
+      "weight": 1.3,
+      "questionCount": 8,
+      "isSpeedRound": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "section": "birthRealm",
+      "text": "Think back to childhood (before age 12). Which best describes the emotional atmosphere you grew up in?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Volatile - unpredictable anger, walking on eggshells, or open conflict",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 3}]
+        },
+        {
+          "id": "b",
+          "text": "Scarcity - never quite enough (money, attention, security, food)",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 3}]
+        },
+        {
+          "id": "c",
+          "text": "Foggy - confusion, mixed messages, things weren't explained or didn't make sense",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 3}]
+        },
+        {
+          "id": "d",
+          "text": "Adequate - basic needs met, some warmth, normal struggles",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 3}]
+        },
+        {
+          "id": "e",
+          "text": "Competitive - achievement-focused, comparisons, pressure to perform",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 3}]
+        },
+        {
+          "id": "f",
+          "text": "Comfortable - stable, privileged, most needs anticipated before you felt them",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 3}]
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "section": "birthRealm",
+      "text": "Your relationship with your physical body growing up was primarily:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tense - chronic illness, injury, pain, or physical trauma",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Hungry - food issues, growth problems, or physical neglect",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Confused - sensory issues, coordination problems, felt disconnected from body",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Functional - body worked, had normal relationship with it",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Evaluated - body was commented on, compared, measured against standards",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Measurers", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Privileged - healthy, attractive, athletic, or body was a source of praise",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Pleasure", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "section": "birthRealm",
+      "text": "As a child, your primary strategy for staying safe was:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hypervigilance - always scanning for threats, reading moods, anticipating danger",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Freezing", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Performing - being good, useful, or entertaining to earn your place",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Hiding - becoming invisible, not making waves, disappearing",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Problem-solving - figuring things out, asking questions, understanding how things work",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Competing - being better, faster, smarter than others to secure your position",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Warriors", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Assuming - safety was baseline, didn't think much about it",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "section": "birthRealm",
+      "text": "The earliest emotional wound you can identify was around:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Betrayal or injustice - something deeply unfair happened",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Deprivation - something essential was withheld or never given",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Void", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Confusion - you couldn't make sense of what was happening",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Loss - something or someone was taken away",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Strugglers", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Inadequacy - you weren't enough in some measurable way",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Resenters", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Disruption - something interrupted an otherwise stable situation",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Complacent", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "section": "birthRealm",
+      "text": "Looking at your family system, the most obvious inherited pattern is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rage or resentment - anger passed down through generations",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Addiction or obsession - compulsive patterns around substances, money, or behaviors",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Disconnection - checked-out, dissociated, or emotionally absent family members",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Striving - genuine effort to understand and grow, even imperfectly",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Competition - comparing, ranking, status-consciousness",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Complacency - 'we're fine,' unexamined assumptions, resistance to looking deeper",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "section": "birthRealm",
+      "text": "If you had to name ONE quality you developed in childhood that still serves you:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sensitivity to danger - you can feel when something's off",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 1},
+            {"target": "protectiveFactor", "factor": "awareness", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Resourcefulness - you know how to get what you need",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 1},
+            {"target": "protectiveFactor", "factor": "agency", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Patience - you can wait, endure, let things pass",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 1},
+            {"target": "protectiveFactor", "factor": "equanimity", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Curiosity - you want to understand",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 1},
+            {"target": "protectiveFactor", "factor": "investigation", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Drive - you don't give up easily",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 1},
+            {"target": "protectiveFactor", "factor": "effort", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Ease - you can relax and enjoy",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 1},
+            {"target": "protectiveFactor", "factor": "ease", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "section": "threePoisons",
+      "text": "When someone wrongs you, your most common internal response is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Immediate hot rage - I want to hurt them back",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 2}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Cold calculation - I'll remember this, and they'll pay",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Freezing", "points": 2}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Righteous certainty - I'm completely justified in my reaction",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 2}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Spiraling self-blame - somehow this is my fault",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 2}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Craving compensation - they owe me something now",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Confusion - I don't know what to feel",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "g",
+          "text": "Problem-solving - how do I prevent this in the future?",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "h",
+          "text": "Comparison - this proves I'm better/worse than them",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "i",
+          "text": "Philosophical distance - suffering is part of life",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "section": "threePoisons",
+      "text": "Which of these do you find yourself doing most often?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Snapping at people, then feeling justified",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 1},
+            {"target": "form", "form": "The Inferno", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Cutting people off completely - ghosting, blocking, ending relationships",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Freezing", "points": 1},
+            {"target": "form", "form": "The Glacier", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Correcting people - pointing out where they're wrong",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1},
+            {"target": "form", "form": "The Judge", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Replaying conversations in your head, thinking of what you should have said",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 1},
+            {"target": "form", "form": "The Ruminant", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Complaining about what you don't have",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Zoning out, scrolling, numbing",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "g",
+          "text": "Trying to understand why things happened",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "Noticing how you compare to others",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Measurers", "points": 1}
+          ]
+        },
+        {
+          "id": "i",
+          "text": "Reminding yourself it doesn't really matter",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q9",
+      "section": "threePoisons",
+      "text": "The thing most likely to make you withdraw emotionally is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Being disrespected or dismissed",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Being lied to or manipulated",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Being proven wrong publicly",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1},
+            {"target": "form", "form": "The Judge", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Making a mistake that hurt someone",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 1},
+            {"target": "form", "form": "The Self-Flagellant", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Not getting what you were promised",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Feeling overwhelmed or confused",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "g",
+          "text": "Losing someone or something important",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Strugglers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "Seeing others get what you deserve",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "i",
+          "text": "Being forced to deal with unnecessary problems",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 1},
+            {"target": "form", "form": "The Entitled", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "section": "threePoisons",
+      "text": "Honestly, your relationship with anger is:",
+      "type": "single",
+      "shadowDetection": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "It runs me - I can't always control it",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 2}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "I store it - I hold onto grievances",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Freezing", "points": 2}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "I justify it - my anger is usually righteous",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 2}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "I turn it inward - I'm harder on myself than others",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 3},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 2}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "I barely feel it - anger isn't really my thing",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 1},
+            {"target": "shadowFlag", "flag": "DENIED_ANGER", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "It confuses me - I don't always know when I'm angry",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "g",
+          "text": "I try to understand it - anger tells me something important",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "h",
+          "text": "I channel it - anger motivates me",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "i",
+          "text": "I've transcended it - I don't really get angry anymore",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 1},
+            {"target": "shadowFlag", "flag": "SPIRITUAL_BYPASS", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "section": "threePoisons",
+      "text": "Your relationship with wanting things is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "I want intensely and immediately - gratification feels urgent",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 2},
+            {"target": "form", "form": "The Glutton", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "I want specific things - particular items, experiences, or achievements",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 1},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Theft", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "I can't name what I want - there's a general emptiness",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Void", "points": 2},
+            {"target": "form", "form": "The Emptiness", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "I want what others have - seeing their success clarifies my desire",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "realm", "realm": "HungryGhost", "points": 1},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Theft", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "I want things but can usually wait or let go",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "I'm not sure I want much of anything - desire feels muted",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "shadowFlag", "flag": "DENIED_DESIRE", "points": 1}
+          ]
+        },
+        {
+          "id": "g",
+          "text": "I want understanding - to know how things work",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "I want recognition - to be seen for what I've done",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Measurers", "points": 1}
+          ]
+        },
+        {
+          "id": "i",
+          "text": "I have what I want - desires feel mostly satisfied",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "shadowFlag", "flag": "SPIRITUAL_BYPASS", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "section": "threePoisons",
+      "text": "Which pattern do you recognize most in yourself?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "I eat/drink/buy/scroll past the point of satisfaction",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 2},
+            {"target": "form", "form": "The Glutton", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "I research and curate - finding the best version of things",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 2},
+            {"target": "form", "form": "The Connoisseur", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "I browse endlessly - looking without committing",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Void", "points": 1},
+            {"target": "form", "form": "The Browser", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "I notice what others have that I don't",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "realm", "realm": "HungryGhost", "points": 1},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Theft", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "I enjoy things but can stop when I've had enough",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "I consume passively - whatever's in front of me",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Herd", "points": 1}
+          ]
+        },
+        {
+          "id": "g",
+          "text": "I seek experiences that teach me something",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "I track my progress and achievements",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Measurers", "points": 1},
+            {"target": "form", "form": "The Accumulator", "points": 1}
+          ]
+        },
+        {
+          "id": "i",
+          "text": "I have refined taste and access to quality",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Pleasure", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "section": "threePoisons",
+      "text": "If you're honest, you spend most of your mental energy wanting:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Physical pleasure or relief - food, sex, substances, comfort",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 2}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Status markers - money, titles, followers, recognition",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 2}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Something you can't name - a feeling of fullness or completion",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Void", "points": 2}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "What others have - their success, relationships, opportunities",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "realm", "realm": "HungryGhost", "points": 1},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Theft", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Progress on meaningful goals",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Builders", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Peace and quiet - to be left alone",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "g",
+          "text": "Answers and understanding",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "Victory or vindication",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Warriors", "points": 1}
+          ]
+        },
+        {
+          "id": "i",
+          "text": "Continued comfort and pleasure",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "section": "threePoisons",
+      "text": "Honestly, your relationship with craving is:",
+      "type": "single",
+      "shadowDetection": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "It controls me - I act on urges I wish I didn't",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 1},
+            {"target": "form", "form": "The Addict", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "It's sophisticated - I want quality, not quantity",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 1},
+            {"target": "form", "form": "The Connoisseur", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "It's vague - I feel empty but don't know what would fill it",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Void", "points": 2}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "It's comparative - I want what would put me ahead",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "realm", "realm": "HungryGhost", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "It's manageable - I have desires but they don't rule me",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 3}]
+        },
+        {
+          "id": "f",
+          "text": "It's dulled - I don't feel strong desires about much",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "shadowFlag", "flag": "DENIED_DESIRE", "points": 1}
+          ]
+        },
+        {
+          "id": "g",
+          "text": "It's channeled - I crave knowledge and growth",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "h",
+          "text": "It's competitive - I want to win",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "i",
+          "text": "It's satisfied - I've achieved enough to feel content",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "section": "threePoisons",
+      "text": "When you encounter something confusing or complex, you typically:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Get frustrated and want to destroy or escape it",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Look for how to extract value from it anyway",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Freeze or shut down - it's overwhelming",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 3},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Stay with it and try to figure it out",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Assess whether engaging is worth your effort",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Accept it without needing to understand",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "section": "threePoisons",
+      "text": "How well do you understand your own patterns?",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "I know exactly what's wrong with me",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "I'm always discovering new things I want",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "I'm often confused about why I do what I do",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 3}]
+        },
+        {
+          "id": "d",
+          "text": "I'm actively working on understanding myself",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1},
+            {"target": "genuineInquiry", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "I know what I need to do to succeed",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "I've done enough self-work - I know myself well enough",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "shadowFlag", "flag": "SPIRITUAL_BYPASS", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "section": "threePoisons",
+      "text": "When you feel fundamentally lost or uncertain about life, you:",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Get angry - at yourself, others, or the situation",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Try to acquire something that might help",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Wait for it to pass - feelings are temporary",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Investigate - what's this about?",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "genuineInquiry", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Push harder - action is the answer",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Trust it'll work out - it always has",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "section": "threePoisons",
+      "text": "Honestly, your relationship with uncertainty is:",
+      "type": "single",
+      "shadowDetection": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Threatening - not-knowing feels dangerous",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Activating - it makes me want to get something",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Paralyzing - I tend to freeze when I don't know",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 3}]
+        },
+        {
+          "id": "d",
+          "text": "Interesting - uncertainty is where discovery happens",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 3}]
+        },
+        {
+          "id": "e",
+          "text": "Motivating - uncertainty means there's still something to prove",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Fine - I've made peace with not-knowing",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "shadowFlag", "flag": "SPIRITUAL_BYPASS", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "section": "shadowDetection",
+      "text": "The quality you judge MOST harshly in others is:",
+      "type": "single",
+      "shadowDetection": true,
+      "projectionQuestion": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Cruelty - people who deliberately hurt others",
+          "scoring": [{"target": "projection", "projectedRealm": "Hell", "points": 1}]
+        },
+        {
+          "id": "b",
+          "text": "Greed - people who take more than they need",
+          "scoring": [{"target": "projection", "projectedRealm": "HungryGhost", "points": 1}]
+        },
+        {
+          "id": "c",
+          "text": "Stupidity - people who don't think",
+          "scoring": [{"target": "projection", "projectedRealm": "Animal", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Weakness - people who won't help themselves",
+          "scoring": [{"target": "projection", "projectedRealm": "Human", "points": 1}]
+        },
+        {
+          "id": "e",
+          "text": "Arrogance - people who think they're better than others",
+          "scoring": [{"target": "projection", "projectedRealm": "Asura", "points": 1}]
+        },
+        {
+          "id": "f",
+          "text": "Negativity - people who complain or bring others down",
+          "scoring": [{"target": "projection", "projectedRealm": "Deva", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "section": "shadowDetection",
+      "text": "How would your WORST critic describe you?",
+      "type": "single",
+      "shadowDetection": true,
+      "criticImageQuestion": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Angry, harsh, or mean",
+          "scoring": [{"target": "criticImage", "realm": "Hell", "points": 1}]
+        },
+        {
+          "id": "b",
+          "text": "Selfish, greedy, or grasping",
+          "scoring": [{"target": "criticImage", "realm": "HungryGhost", "points": 1}]
+        },
+        {
+          "id": "c",
+          "text": "Lazy, checked-out, or oblivious",
+          "scoring": [{"target": "criticImage", "realm": "Animal", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Lost, struggling, or broken",
+          "scoring": [{"target": "criticImage", "realm": "Human", "points": 1}]
+        },
+        {
+          "id": "e",
+          "text": "Jealous, competitive, or petty",
+          "scoring": [{"target": "criticImage", "realm": "Asura", "points": 1}]
+        },
+        {
+          "id": "f",
+          "text": "Entitled, spoiled, or out of touch",
+          "scoring": [{"target": "criticImage", "realm": "Deva", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "section": "shadowDetection",
+      "text": "The thing you'd be MOST ashamed for others to know about you is:",
+      "type": "single",
+      "shadowDetection": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "The depth of your anger or resentment",
+          "scoring": [{"target": "consciousShadow", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "The extent of your desires or cravings",
+          "scoring": [{"target": "consciousShadow", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "How lost or confused you really feel",
+          "scoring": [{"target": "consciousShadow", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "How much you're struggling",
+          "scoring": [{"target": "consciousShadow", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "How much you compare yourself to others",
+          "scoring": [{"target": "consciousShadow", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "How comfortable your life actually is",
+          "scoring": [{"target": "consciousShadow", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "section": "shadowDetection",
+      "text": "The story you tell yourself about who you are involves being:",
+      "type": "single",
+      "shadowDetection": true,
+      "selfImageQuestion": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Righteous - standing up against wrong",
+          "scoring": [{"target": "selfImage", "realm": "Hell", "points": 1}]
+        },
+        {
+          "id": "b",
+          "text": "Discerning - knowing quality when you see it",
+          "scoring": [{"target": "selfImage", "realm": "HungryGhost", "points": 1}]
+        },
+        {
+          "id": "c",
+          "text": "Peaceful - not causing problems",
+          "scoring": [{"target": "selfImage", "realm": "Animal", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Growing - working on yourself",
+          "scoring": [{"target": "selfImage", "realm": "Human", "points": 1}]
+        },
+        {
+          "id": "e",
+          "text": "Achieving - earning your place",
+          "scoring": [{"target": "selfImage", "realm": "Asura", "points": 1}]
+        },
+        {
+          "id": "f",
+          "text": "Blessed - fortunate in important ways",
+          "scoring": [{"target": "selfImage", "realm": "Deva", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "section": "shadowDetection",
+      "text": "Your coworker gets a promotion you wanted. Your FIRST reaction (be honest) is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Anger - this is unfair",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Wanting - now I need to figure out how to get mine",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Acceptance - that's how it goes",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Reflection - what can I learn from this?",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Comparison - measuring yourself against them",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Dismissal - it doesn't really matter to me",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 1},
+            {"target": "shadowFlag", "flag": "DENIED_DESIRE", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "section": "shadowDetection",
+      "text": "Someone you respect tells you that you have a significant blind spot. You:",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Get defensive - they're wrong",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Get curious about how this might serve you - what's the advantage?",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Feel confused and overwhelmed",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Thank them and investigate",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "genuineInquiry", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Evaluate their credibility - are they qualified to judge?",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Agree easily - you're probably right",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "section": "shadowDetection",
+      "text": "Which shadow pattern do you KNOW you have (even if you don't want to admit it)?",
+      "type": "single",
+      "shadowDetection": true,
+      "acknowledgedShadowQuestion": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "I can be cruel when hurt",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "I can be greedy or grasping",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "I can be checked-out or avoidant",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "I can be self-pitying or victimized",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "I can be jealous or competitive",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "I can be entitled or complacent",
+          "scoring": [{"target": "acknowledgedShadow", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "section": "shadowDetection",
+      "text": "Think of the last time you lied or withheld truth. It was probably to:",
+      "type": "single",
+      "shadowDetection": true,
+      "liePatternQuestion": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Protect yourself from consequences",
+          "scoring": [{"target": "liePattern", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Get or keep something you wanted",
+          "scoring": [{"target": "liePattern", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Avoid dealing with something complicated",
+          "scoring": [{"target": "liePattern", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Protect someone else's feelings",
+          "scoring": [{"target": "liePattern", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Make yourself look better",
+          "scoring": [{"target": "liePattern", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Maintain harmony",
+          "scoring": [{"target": "liePattern", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "section": "fiveHindrances",
+      "text": "Right now, how much mental space is taken up by wanting pleasurable experiences (food, sex, entertainment, substances, comfort)?",
+      "type": "single",
+      "hindranceType": "sensualDesire",
+      "options": [
+        {
+          "id": "a",
+          "text": "Overwhelming - it's most of what I think about",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 2}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Significant - a major thread in my mental life",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 3},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Mouth", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Moderate - present but not dominant",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Minimal - occasionally arises but passes quickly",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Almost none - rarely think about these things",
+          "scoring": [{"target": "shadowFlag", "flag": "DENIED_DESIRE", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "section": "fiveHindrances",
+      "text": "Right now, how much mental space is taken up by resentment, irritation, or thoughts about people who've wronged you?",
+      "type": "single",
+      "hindranceType": "illWill",
+      "options": [
+        {
+          "id": "a",
+          "text": "Overwhelming - I'm frequently angry",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 3}]
+        },
+        {
+          "id": "b",
+          "text": "Significant - there are several people/situations I'm actively resentful toward",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 3}]
+        },
+        {
+          "id": "c",
+          "text": "Moderate - some ongoing grievances but they don't dominate",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Minimal - occasionally irritated but it passes",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Almost none - I rarely feel ill will",
+          "scoring": [{"target": "shadowFlag", "flag": "DENIED_ANGER", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "section": "fiveHindrances",
+      "text": "Right now, your energy and motivation levels are:",
+      "type": "single",
+      "hindranceType": "slothTorpor",
+      "options": [
+        {
+          "id": "a",
+          "text": "Very low - I can barely do basic tasks",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 3},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 2}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Low - I'm functioning but feel heavy and sluggish",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 3},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Mixed - some days up, some days down",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 1}]
+        },
+        {
+          "id": "d",
+          "text": "Adequate - enough energy for what I need to do",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "High - I feel energized and motivated",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 1},
+            {"target": "realm", "realm": "Deva", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "section": "fiveHindrances",
+      "text": "Right now, your mind is:",
+      "type": "single",
+      "hindranceType": "restlessnessWorry",
+      "options": [
+        {
+          "id": "a",
+          "text": "Extremely agitated - can't settle, racing thoughts, high anxiety",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Repetition", "points": 1},
+            {"target": "realm", "realm": "Animal", "points": 1},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Restless - difficulty focusing, jumping between things",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Somewhat unsettled - occasional worry but manageable",
+          "scoring": [{"target": "modifier", "type": "neutral", "points": 0}]
+        },
+        {
+          "id": "d",
+          "text": "Fairly calm - can focus when needed",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Very peaceful - rarely troubled by restlessness",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "section": "fiveHindrances",
+      "text": "Right now, your relationship with the path forward is:",
+      "type": "single",
+      "hindranceType": "doubt",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deeply uncertain - I don't know what to do or believe",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "realm", "realm": "Human", "points": 1},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Strugglers", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Questioning - exploring different possibilities",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Seekers", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Mostly clear - some uncertainty but general direction is known",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Clear - I know what I need to do",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 1},
+            {"target": "realm", "realm": "Deva", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Unquestioned - not really thinking about it",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "shadowFlag", "flag": "SPIRITUAL_BYPASS", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "section": "fiveHindrances",
+      "text": "If you had to pick ONE thing that most blocks your peace right now:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wanting things (sense desire)",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Anger or resentment (ill will)",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Low energy or motivation (sloth-torpor)",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Anxiety or worry (restlessness)",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 1},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1},
+            {"target": "realm", "realm": "Hell", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Confusion about what to do (doubt)",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "None of these are major issues right now",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 1}]
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "section": "networkTopology",
+      "text": "In relationships, your most common pattern is:",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Intensity - deep connection or total distance, nothing in between",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "topology", "type": "volatile", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Transaction - I give to get, keep track of exchanges",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Status", "points": 1},
+            {"target": "topology", "type": "transactional", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Merging - I lose myself in others, adopt their preferences",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Herd", "points": 1},
+            {"target": "topology", "type": "merging", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Engagement - genuine interest in mutual growth",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "genuineInquiry", "points": 1},
+            {"target": "topology", "type": "mutual", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Positioning - aware of status dynamics in relationships",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "topology", "type": "strategic", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Selectivity - small circle, high standards for entry",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "topology", "type": "selective", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q34",
+      "section": "networkTopology",
+      "text": "When you learn something important, you tend to:",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Weaponize it - information is power for offense or defense",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Crushing", "points": 1},
+            {"target": "realm", "realm": "Asura", "points": 1},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Warriors", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Hoard it - keep advantages to yourself",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "realm", "realm": "Asura", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Absorb it passively - don't do much with it",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Integrate and share - knowledge grows by sharing",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "genuineInquiry", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Use it to position yourself - demonstrate expertise",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Measurers", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Appreciate it - add it to your understanding",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q35",
+      "section": "networkTopology",
+      "text": "Your social network is best described as:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Small and intense - few connections, high stakes",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Instrumental - people who can help or be helped",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Undefined - you don't think much about it",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Selective but genuine - carefully chosen, mutually invested",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Strategic - aware of who knows who and how it matters",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Established - stable network you've had for a long time",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q36",
+      "section": "networkTopology",
+      "text": "When a relationship ends or a connection disappears, you typically:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Feel it intensely - grief turns to anger or shutdown",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Calculate the loss - what did I give that I won't get back?",
+          "scoring": [
+            {"target": "realm", "realm": "HungryGhost", "points": 2},
+            {"target": "subcategory", "realm": "HungryGhost", "subcategory": "Theft", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Move on without much processing - people come and go",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Grieve and reflect - what can I learn from this?",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 3}]
+        },
+        {
+          "id": "e",
+          "text": "Evaluate what it means for your position",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Adjust comfortably - you have other connections",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Complacent", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q37",
+      "section": "networkTopology",
+      "text": "Under stress, your network of relationships tends to:",
+      "type": "single",
+      "genuineInquiryIndicator": true,
+      "options": [
+        {
+          "id": "a",
+          "text": "Contract violently - you push people away or they flee",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 1},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Freezing", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Become extractive - you take more than you give",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Freeze - you stop reaching out",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Torpor", "points": 1},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Adapt - you ask for help and offer it",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 3},
+            {"target": "genuineInquiry", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Become competitive - you watch for threats",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Stay stable - your network can weather difficulty",
+          "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q38",
+      "section": "networkTopology",
+      "text": "In your networks, you're most often:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "A volatile hub - at the center of drama or intensity",
+          "scoring": [
+            {"target": "realm", "realm": "Hell", "points": 2},
+            {"target": "subcategory", "realm": "Hell", "subcategory": "Burning", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "A seeking node - connecting to sources of what you want",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "A peripheral node - on the edges, not central",
+          "scoring": [
+            {"target": "realm", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Herd", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "A connector - linking people and ideas",
+          "scoring": [
+            {"target": "realm", "realm": "Human", "points": 2},
+            {"target": "subcategory", "realm": "Human", "subcategory": "Builders", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "A competing hub - aware of other hubs and your relative position",
+          "scoring": [
+            {"target": "realm", "realm": "Asura", "points": 2},
+            {"target": "subcategory", "realm": "Asura", "subcategory": "Warriors", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "A stable hub - others connect to you",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Accomplished", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q39",
+      "section": "riskVectors",
+      "text": "If you were going to fall into a trap, it would probably be:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Righteous anger - being so sure you're right that you cause harm",
+          "scoring": [
+            {"target": "riskVector", "risk": "hellTrap", "points": 2},
+            {"target": "realm", "realm": "Hell", "points": 1}
+          ]
+        },
+        {
+          "id": "b",
+          "text": "Sophisticated craving - wanting 'quality' things in ways that still trap you",
+          "scoring": [
+            {"target": "riskVector", "risk": "hungryGhostTrap", "points": 2},
+            {"target": "realm", "realm": "HungryGhost", "points": 1}
+          ]
+        },
+        {
+          "id": "c",
+          "text": "Comfortable numbness - coasting without growing",
+          "scoring": [
+            {"target": "riskVector", "risk": "animalTrap", "points": 2},
+            {"target": "realm", "realm": "Animal", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Spiritual materialism - treating growth as another achievement",
+          "scoring": [
+            {"target": "riskVector", "risk": "humanToAsuraTrap", "points": 2},
+            {"target": "realm", "realm": "Human", "points": 1},
+            {"target": "realm", "realm": "Asura", "points": 1}
+          ]
+        },
+        {
+          "id": "e",
+          "text": "Competitive virtue - being better at being good",
+          "scoring": [
+            {"target": "riskVector", "risk": "asuraTrap", "points": 2},
+            {"target": "realm", "realm": "Asura", "points": 1}
+          ]
+        },
+        {
+          "id": "f",
+          "text": "Complacent transcendence - using peace to avoid engagement",
+          "scoring": [
+            {"target": "riskVector", "risk": "devaTrap", "points": 2},
+            {"target": "realm", "realm": "Deva", "points": 1},
+            {"target": "form", "form": "The Guru", "points": 1},
+            {"target": "form", "form": "The Blissed", "points": 1},
+            {"target": "form", "form": "The Transcender", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q40",
+      "section": "riskVectors",
+      "text": "If you keep doing what you're doing, you'll probably end up:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Isolated by your own intensity",
+          "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Still hungry no matter what you get",
+          "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Unchanged in 10 years",
+          "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Genuinely different in ways that matter",
+          "scoring": [{"target": "realm", "realm": "Human", "points": 3}]
+        },
+        {
+          "id": "e",
+          "text": "Successful but not satisfied",
+          "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Comfortable but not transformed",
+          "scoring": [
+            {"target": "realm", "realm": "Deva", "points": 2},
+            {"target": "subcategory", "realm": "Deva", "subcategory": "Complacent", "points": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q41",
+      "section": "riskVectors",
+      "text": "The manipulation technique most likely to work on you is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Righteous cause - giving you something to fight for",
+          "scoring": [{"target": "vulnerability", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Scarcity - convincing you something is rare or limited",
+          "scoring": [{"target": "vulnerability", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Social proof - showing you everyone else is doing it",
+          "scoring": [
+            {"target": "vulnerability", "realm": "Animal", "points": 2},
+            {"target": "subcategory", "realm": "Animal", "subcategory": "Herd", "points": 1}
+          ]
+        },
+        {
+          "id": "d",
+          "text": "Growth opportunity - offering transformation",
+          "scoring": [{"target": "vulnerability", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Status opportunity - offering recognition",
+          "scoring": [{"target": "vulnerability", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Exclusive access - making you feel special",
+          "scoring": [{"target": "vulnerability", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q42",
+      "section": "riskVectors",
+      "text": "The thing most likely to protect you from your worst patterns is:",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Someone who can receive your anger without reacting",
+          "scoring": [{"target": "protectiveFactor", "factor": "witnessing", "realm": "Hell", "points": 2}]
+        },
+        {
+          "id": "b",
+          "text": "Genuine satisfaction - experiencing enough",
+          "scoring": [{"target": "protectiveFactor", "factor": "contentment", "realm": "HungryGhost", "points": 2}]
+        },
+        {
+          "id": "c",
+          "text": "Something that wakes you up from autopilot",
+          "scoring": [{"target": "protectiveFactor", "factor": "awakening", "realm": "Animal", "points": 2}]
+        },
+        {
+          "id": "d",
+          "text": "Continued practice and inquiry",
+          "scoring": [{"target": "protectiveFactor", "factor": "practice", "realm": "Human", "points": 2}]
+        },
+        {
+          "id": "e",
+          "text": "Recognition that doesn't depend on comparison",
+          "scoring": [{"target": "protectiveFactor", "factor": "intrinsicWorth", "realm": "Asura", "points": 2}]
+        },
+        {
+          "id": "f",
+          "text": "Disruption that forces engagement",
+          "scoring": [{"target": "protectiveFactor", "factor": "disruption", "realm": "Deva", "points": 2}]
+        }
+      ]
+    },
+    {
+      "id": "Q43",
+      "section": "speedRound",
+      "text": "You find out someone spread a rumor about you.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Rage", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]},
+        {"id": "b", "text": "What do I lose from this?", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Avoid the situation", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Figure out what happened", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "How does this affect my standing?", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "It doesn't really bother me", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q44",
+      "section": "speedRound",
+      "text": "You have a free weekend with no obligations.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Finally some peace - but find yourself ruminating", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]},
+        {"id": "b", "text": "Think about what you want to do/get/experience", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "No plans, just drift", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Mix of rest and something meaningful", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Productive - advance your position", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Enjoy comfort and pleasure", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q45",
+      "section": "speedRound",
+      "text": "Someone close to you is succeeding.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Good for them (but notice some tension)", "scoring": [{"target": "realm", "realm": "Hell", "points": 1}, {"target": "realm", "realm": "Asura", "points": 1}]},
+        {"id": "b", "text": "How can I benefit from their success?", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Doesn't really affect me", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Genuinely happy for them", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Immediate comparison to yourself", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}, {"target": "form", "form": "The Thief of Joy", "points": 1}]},
+        {"id": "f", "text": "Happy from your position of stability", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q46",
+      "section": "speedRound",
+      "text": "You wake up at 3am.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Anger or replaying conflicts", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}, {"target": "form", "form": "The Ruminant", "points": 1}]},
+        {"id": "b", "text": "Wanting - planning acquisitions or experiences", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Nothing much - fall back asleep", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Reflection or processing", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Planning competitive moves", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Comfortable - not much disturbs your sleep", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q47",
+      "section": "speedRound",
+      "text": "A stranger is rude to you.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Anger - internal or external", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]},
+        {"id": "b", "text": "Confusion about what they wanted", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 1}, {"target": "realm", "realm": "Animal", "points": 1}]},
+        {"id": "c", "text": "Whatever - move on immediately", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Wonder what their deal is", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Note their rudeness - they'll regret it", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Unbothered", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q48",
+      "section": "speedRound",
+      "text": "You have to make a difficult decision.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Stress about getting it wrong / being judged", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]},
+        {"id": "b", "text": "Which option gets me more of what I want?", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Avoid deciding as long as possible", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Gather information, sit with uncertainty", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Which option positions me best?", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Trust your gut - it usually works out", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q49",
+      "section": "speedRound",
+      "text": "Something breaks.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "Frustration or anger", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}]},
+        {"id": "b", "text": "How do I get a replacement?", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Deal with it later", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Fix or accept it", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Annoyed if it affects your status", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Someone else will handle it", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    },
+    {
+      "id": "Q50",
+      "section": "speedRound",
+      "text": "You're at a party where you don't know anyone.",
+      "type": "speed",
+      "options": [
+        {"id": "a", "text": "On guard - scanning for threats or judgment", "scoring": [{"target": "realm", "realm": "Hell", "points": 2}, {"target": "subcategory", "realm": "Animal", "subcategory": "Prey", "points": 1}]},
+        {"id": "b", "text": "Looking for interesting people to connect with (to get something)", "scoring": [{"target": "realm", "realm": "HungryGhost", "points": 2}]},
+        {"id": "c", "text": "Find a corner, wait for it to be over", "scoring": [{"target": "realm", "realm": "Animal", "points": 2}]},
+        {"id": "d", "text": "Curious - who are these people?", "scoring": [{"target": "realm", "realm": "Human", "points": 2}]},
+        {"id": "e", "text": "Assessing where you fit in the hierarchy", "scoring": [{"target": "realm", "realm": "Asura", "points": 2}]},
+        {"id": "f", "text": "Comfortable - being new is fine", "scoring": [{"target": "realm", "realm": "Deva", "points": 2}]}
+      ]
+    }
+  ]
+}
