@@ -17,4 +17,6 @@ export { calculateSubcategory, determineForm } from './formSelection.js';
 export { calculateConfidence, getConfidenceLabel, getTrajectory } from './confidence.js';
 // Constants
 export { SECTION_WEIGHTS, CALIBRATION, TARGET_DISTRIBUTION, REALM_HIERARCHY, SUBCATEGORY_DISTRIBUTIONS, FORM_POPULATIONS, GENUINE_INQUIRY_QUESTIONS, GENUINE_INQUIRY_ANSWERS } from './constants.js';
+// Adaptive Calibration
+export { recordUserResult, recalibrate, getFormWeight, getAllFormWeights, resetCalibration, printCalibrationStatus } from './adaptive-calibration.js';
 //# sourceMappingURL=index.js.map

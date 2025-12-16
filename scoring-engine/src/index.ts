@@ -69,3 +69,18 @@ export {
   GENUINE_INQUIRY_QUESTIONS,
   GENUINE_INQUIRY_ANSWERS
 } from './constants.js';
+
+// Adaptive Calibration
+export {
+  recordUserResult,
+  recalibrate,
+  getFormWeight,
+  getAllFormWeights,
+  resetCalibration,
+  printCalibrationStatus
+} from './adaptive-calibration.js';
+
+export type {
+  UserResult,
+  CalibrationData
+} from './adaptive-calibration.js';

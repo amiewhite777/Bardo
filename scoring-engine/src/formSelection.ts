@@ -1,6 +1,7 @@
 import { Realm, ScoringState, QuizResponse } from './types.js';
 import { REALM_HIERARCHY, FORM_POPULATIONS } from './constants.js';
 import { getResponse } from './scorer.js';
+import { getFormWeight } from './adaptive-calibration.js';
 
 /**
  * Determine subcategory within a realm
@@ -118,8 +119,9 @@ export function determineForm(state: ScoringState, responses: QuizResponse[]): v
   // Score each candidate form based on specific indicators
   const formScores = scoreFormsInSubcategory(realm, subcategory, candidates, responses, state);
 
-  // Calculate composite scores (response score + population weight + baseline)
+  // Calculate composite scores (response score + population weight + adaptive weight + baseline)
   // Population weight helps ensure target distributions are met
+  // Adaptive weight adjusts based on real user data to converge toward targets
   const compositeScores: Record<string, number> = {};
   const POPULATION_WEIGHT = 12000; // Weight factor for population targeting (higher = more influence)
   const RESPONSE_WEIGHT = 0.02; // Minimal influence - population targeting dominates
@@ -128,7 +130,10 @@ export function determineForm(state: ScoringState, responses: QuizResponse[]): v
   for (const form of candidates) {
     const responseScore = (formScores[form] || 0) * RESPONSE_WEIGHT;
     const populationScore = (FORM_POPULATIONS[form] || 0) * POPULATION_WEIGHT;
-    compositeScores[form] = BASELINE_SCORE + responseScore + populationScore;
+    const adaptiveWeight = getFormWeight(form); // 0.3 to 3.0, learns from real data
+
+    // Apply adaptive weight to the population score for dynamic calibration
+    compositeScores[form] = BASELINE_SCORE + responseScore + (populationScore * adaptiveWeight);
   }
 
   // Use weighted random selection
