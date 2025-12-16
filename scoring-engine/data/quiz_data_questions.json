@@ -654,6 +654,11 @@
               "realm": "Hell",
               "subcategory": "Burning",
               "points": 2
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -688,6 +693,11 @@
               "realm": "Hell",
               "subcategory": "Crushing",
               "points": 2
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 1
             }
           ]
         },
@@ -3497,6 +3507,11 @@
               "realm": "Asura",
               "subcategory": "Warriors",
               "points": 1
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -4661,6 +4676,11 @@
               "target": "realm",
               "realm": "Animal",
               "points": 2
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -4941,6 +4961,11 @@
               "target": "form",
               "form": "The Rabbit",
               "points": 3
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -4952,6 +4977,11 @@
               "target": "form",
               "form": "The Deer",
               "points": 3
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -6224,6 +6254,11 @@
               "target": "form",
               "form": "The Snake",
               "points": 5
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 2
             }
           ]
         },
@@ -6279,6 +6314,11 @@
               "target": "form",
               "form": "The Underminer",
               "points": 2
+            },
+            {
+              "target": "subcategory",
+              "subcategory": "Predator",
+              "points": 1
             }
           ]
         }

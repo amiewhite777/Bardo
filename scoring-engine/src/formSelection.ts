@@ -13,26 +13,21 @@ export function calculateSubcategory(state: ScoringState, responses: QuizRespons
   // If subcategory was pre-determined (e.g., spiritual bypass), use that
   if (state.subcategory) return;
 
-  // Otherwise, calculate based on subcategory scores
+  // Use topology (Q33) as primary mechanism for subcategory selection
+  // This ensures better distribution across subcategories
+  const topologySubcat = getSubcategoryFromTopology(realm, responses);
+
+  // Get subcategory scores as tie-breaker
   const subcategoryScores = state.subcategoryScores[realm];
 
-  // Find subcategory with highest score
-  let maxScore = -1;
-  let selectedSubcategory = '';
-
-  for (const [subcategory, score] of Object.entries(subcategoryScores)) {
-    if (score > maxScore) {
-      maxScore = score;
-      selectedSubcategory = subcategory;
-    }
+  // If topology selected subcategory has any points, use it
+  if (subcategoryScores[topologySubcat] > 0) {
+    state.subcategory = topologySubcat;
+    return;
   }
 
-  // If no subcategory has points, use topology indicators
-  if (!selectedSubcategory || maxScore === 0) {
-    selectedSubcategory = getSubcategoryFromTopology(realm, responses);
-  }
-
-  state.subcategory = selectedSubcategory;
+  // Otherwise, use topology anyway (scores are just supplementary)
+  state.subcategory = topologySubcat;
 }
 
 /**
@@ -126,8 +121,8 @@ export function determineForm(state: ScoringState, responses: QuizResponse[]): v
   // Calculate composite scores (response score + population weight + baseline)
   // Population weight helps ensure target distributions are met
   const compositeScores: Record<string, number> = {};
-  const POPULATION_WEIGHT = 3000; // Weight factor for population targeting (higher = more influence)
-  const RESPONSE_WEIGHT = 0.15; // Reduces influence of question scores to prevent dominance
+  const POPULATION_WEIGHT = 12000; // Weight factor for population targeting (higher = more influence)
+  const RESPONSE_WEIGHT = 0.02; // Minimal influence - population targeting dominates
   const BASELINE_SCORE = 10; // Ensures all forms are reachable
 
   for (const form of candidates) {
