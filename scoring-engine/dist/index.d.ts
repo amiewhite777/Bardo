@@ -1,7 +1,7 @@
 /**
- * Buddhist Afterlife Quiz - Scoring Engine
+ * Afterlife Quiz - Scoring Engine
  *
- * Main exports for the scoring system
+ * Universal psychological assessment scoring system
  */
 export { calculateResult, initializeScoringState, getResponse } from './scorer.js';
 export { detectShadowFlags, calculateShadowGap, applyShadowModifiers, interpretShadowGap } from './shadow.js';

@@ -1,7 +1,7 @@
 {
-  "name": "buddhist-afterlife-quiz-scoring",
+  "name": "afterlife-quiz-scoring",
   "version": "1.0.0",
-  "description": "Scoring engine for Buddhist Afterlife Quiz",
+  "description": "Scoring engine for Afterlife Quiz - Universal psychological assessment",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "node --test dist/tests/**/*.test.js",
     "simulate": "node dist/simulate.js"
   },
-  "keywords": ["quiz", "scoring", "buddhist", "psychology"],
+  "keywords": ["quiz", "scoring", "psychology", "assessment"],
   "author": "",
   "license": "MIT",
   "devDependencies": {

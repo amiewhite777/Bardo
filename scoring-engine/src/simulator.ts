@@ -306,7 +306,7 @@ export function printSimulationReport(results: SimulationResults): void {
 export function main() {
   const count = parseInt(process.argv[2]) || 1000;
 
-  console.log('🧪 Buddhist Afterlife Quiz - Distribution Simulation');
+  console.log('🧪 Afterlife Quiz - Distribution Simulation');
   console.log('=====================================================\n');
 
   const results = runSimulation(count);

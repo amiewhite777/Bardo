@@ -1,7 +1,7 @@
 /**
- * Buddhist Afterlife Quiz - Scoring Engine
+ * Afterlife Quiz - Scoring Engine
  *
- * Main exports for the scoring system
+ * Universal psychological assessment scoring system
  */
 
 // Main scoring function

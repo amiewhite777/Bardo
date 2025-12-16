@@ -123,30 +123,59 @@ export function determineForm(state: ScoringState, responses: QuizResponse[]): v
   // Score each candidate form based on specific indicators
   const formScores = scoreFormsInSubcategory(realm, subcategory, candidates, responses, state);
 
-  // Find highest scoring form
-  let maxScore = -1;
-  let selectedForm = candidates[0];
-  const ties: string[] = [];
+  // Calculate composite scores (response score + population weight + baseline)
+  // Population weight helps ensure target distributions are met
+  const compositeScores: Record<string, number> = {};
+  const POPULATION_WEIGHT = 250; // Weight factor for population targeting (higher = more influence)
+  const BASELINE_SCORE = 10; // Ensures all forms are reachable
 
-  for (const [form, score] of Object.entries(formScores)) {
-    if (score > maxScore) {
-      maxScore = score;
-      selectedForm = form;
-      ties.length = 0;
-      ties.push(form);
-    } else if (score === maxScore) {
-      ties.push(form);
+  for (const form of candidates) {
+    const responseScore = formScores[form] || 0;
+    const populationScore = (FORM_POPULATIONS[form] || 0) * POPULATION_WEIGHT;
+    compositeScores[form] = BASELINE_SCORE + responseScore + populationScore;
+  }
+
+  // Use weighted random selection
+  const selectedForm = weightedRandomSelection(compositeScores);
+  state.specificForm = selectedForm;
+}
+
+/**
+ * Select a form using weighted random selection
+ * Forms with higher scores are more likely to be selected,
+ * but all forms remain reachable
+ */
+function weightedRandomSelection(scores: Record<string, number>): string {
+  const forms = Object.keys(scores);
+  if (forms.length === 0) return 'Unknown';
+  if (forms.length === 1) return forms[0];
+
+  // Ensure all scores are non-negative
+  const minScore = Math.min(...Object.values(scores));
+  const offset = minScore < 0 ? -minScore : 0;
+
+  // Calculate total weight
+  let totalWeight = 0;
+  const weights: Record<string, number> = {};
+
+  for (const form of forms) {
+    const weight = Math.max(scores[form] + offset, 0.1); // Minimum weight ensures all forms reachable
+    weights[form] = weight;
+    totalWeight += weight;
+  }
+
+  // Random selection
+  let random = Math.random() * totalWeight;
+
+  for (const form of forms) {
+    random -= weights[form];
+    if (random <= 0) {
+      return form;
     }
   }
 
-  // If tie, use population as tiebreaker (more common forms win)
-  if (ties.length > 1) {
-    selectedForm = ties.reduce((a, b) =>
-      FORM_POPULATIONS[a] > FORM_POPULATIONS[b] ? a : b
-    );
-  }
-
-  state.specificForm = selectedForm;
+  // Fallback (should never reach here)
+  return forms[0];
 }
 
 /**
