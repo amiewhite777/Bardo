@@ -7,6 +7,9 @@
 // Main scoring function
 export { calculateResult, initializeScoringState, getResponse } from './scorer.js';
 
+// Simplified scoring for v2 (20 questions)
+export { calculateSimpleResult } from './simple-scorer.js';
+
 // Shadow detection
 export {
   detectShadowFlags,

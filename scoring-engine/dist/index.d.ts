@@ -4,6 +4,7 @@
  * Universal psychological assessment scoring system
  */
 export { calculateResult, initializeScoringState, getResponse } from './scorer.js';
+export { calculateSimpleResult } from './simple-scorer.js';
 export { detectShadowFlags, calculateShadowGap, applyShadowModifiers, interpretShadowGap } from './shadow.js';
 export { checkHumanQualification, checkDevaQualification, handleHumanQualificationFailure, handleDevaBypass } from './qualification.js';
 export { breakTie, determinePrimaryRealm, calculateConsistency } from './tiebreaker.js';

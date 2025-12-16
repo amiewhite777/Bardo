@@ -1,4 +1,4 @@
-import { calculateResult, recordUserResult } from '../lib/scoring/index.js';
+import { calculateSimpleResult, recordUserResult } from '../lib/scoring/index.js';
 
 export default async function handler(req, res) {
   // Set CORS headers
@@ -21,8 +21,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid request body' });
     }
 
-    // Calculate the result
-    const result = calculateResult(session);
+    // Calculate the result using simplified scorer
+    const result = calculateSimpleResult(session);
 
     // Record for adaptive calibration
     try {
