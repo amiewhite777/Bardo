@@ -1,4 +1,4 @@
-import { calculateResult, recordUserResult } from './scoring-engine/index.js';
+import { calculateResult, recordUserResult } from '../lib/scoring/index.js';
 
 export default async function handler(req, res) {
   // Set CORS headers
